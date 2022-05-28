@@ -1,31 +1,71 @@
-﻿//. Задача. 66
+//. Задача. 66
 
 /*
 
-int n, m, s=0;
-Console.Write("Введи значение от: ");
-n = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введи значение до: ");
-m = Convert.ToInt32(Console.ReadLine());
-for (int i = n; i <= m; i++)
-    s += i;
-Console.WriteLine(s);
+using System;
+class GFG
+
+{
+    public static int recurSum(int n)
+
+    {
+
+        if (n <= 1)
+
+            return n;
+
+        return n + recurSum(n - 1);
+
+    }
+    public static void Main()
+
+    {
+
+        int n = 5;
+
+        Console.WriteLine(recurSum(n));
+
+    }
+
+}
 */
+  
+  
+
+
+
+
+
+
 
 
 //. Задача. 67
 
 /*
 
-int a = int.Parse(Console.ReadLine());
-int s = 0;
-while (a > 0)
-{
-    s = s + a % 10;
-    a = a /10 ;
+using System;
  
+class GFG
+{
+     
+ static int SumOfDigit(int n)
+ {
+     
+    if (n == 0)
+        return 0;
+         
+    return(n % 10 + SumOfDigit(n / 10));
+ }
+ 
+ public static void Main()
+ {
+    int n = 453;
+    int ans = SumOfDigit(n);
+     
+    Console.Write("Sum = " + ans);
+ }
 }
-Console.WriteLine(s);
 
 */
+
 
